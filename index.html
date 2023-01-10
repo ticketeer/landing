@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msapplication-TileColor" content="#14b8a6">
+<meta name="theme-color" content="#ffffff">
+<meta name="app-name" content="{{ config('app.name', 'Ticketeer') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#14b8a6">
+<title>Ticketeer :: Coming Soon</title>
+<style>
+  *{padding:0;margin:0;}
+  html{background:#14b8a6;}
+  #preload{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+  #preload::after{content:'';width:200px;height:200px;position:absolute;top:-100px;left:-100px;border-radius:50%;box-sizing:border-box;border:7px solid rgba(255,255,255,0.3);border-top-color:#14b8a6;animation:spin 1s infinite linear;}
+  #preload::before{content:'';width:160px;height:160px;position:absolute;top:-80px;left:-80px;border-radius:50%;background:url('icon.svg');animation: wiggle 2.5s infinite;}
+  #preload span{width:200px;position:absolute;left:-100px;bottom:-135px;text-align:center;color:#fff;}
+  @keyframes spin {100%{transform: rotate(360deg);}}
+  @keyframes wiggle {0%{transform:rotate(0deg);} 80%{transform:rotate(0deg);} 85%{transform:rotate(5deg);} 95%{transform:rotate(-5deg);} 100%{transform:rotate(0deg);}}
+</style>
+</head>
+<body><div id="preload"></div></body>
+</html>
